@@ -1,5 +1,6 @@
-package dev.java10x.customermanagement;
+package dev.java10x.customermanagement.customers;
 
+import dev.java10x.customermanagement.plans.PlanModel;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,9 @@ public class CustomerModel {
     private String name;
     private int idade;
     private String email;
+    @ManyToOne
+    @JoinColumn(name = "plan_id")
+    private PlanModel plan;
 
     public CustomerModel() {
     }

@@ -1,4 +1,4 @@
-package dev.java10x.customermanagement;
+package dev.java10x.customermanagement.customers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
