@@ -18,6 +18,7 @@ public class CustomerModel {
     private Long id;
     private String name;
     private int idade;
+    @Column(unique = true)
     private String email;
     @ManyToOne
     @JoinColumn(name = "plan_id")
