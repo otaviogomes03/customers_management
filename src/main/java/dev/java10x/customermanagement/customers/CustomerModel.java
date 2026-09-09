@@ -2,9 +2,15 @@ package dev.java10x.customermanagement.customers;
 
 import dev.java10x.customermanagement.plans.PlanModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_customer")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CustomerModel {
 
     @Id
@@ -17,36 +23,4 @@ public class CustomerModel {
     @JoinColumn(name = "plan_id")
     private PlanModel plan;
 
-    public CustomerModel() {
-    }
-
-    public CustomerModel(String name, int idade, String email) {
-        this.name = name;
-        this.idade = idade;
-        this.email = email;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
