@@ -17,9 +17,15 @@ public class PlanModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "name")
     private String name;
-    private double value;
+
+    @Column(name = "price")
+    private double price;
+
     @OneToMany(mappedBy = "plan")
     private List<CustomerModel> customers;
 
